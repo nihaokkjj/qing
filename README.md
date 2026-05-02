@@ -55,7 +55,7 @@ pnpm preview
 - 搜索页通过查询参数 `?q=` 做前端过滤，不依赖后端
 - `src/router/index.js` 内置了部分旧 hash 路由兼容逻辑
 - 资源图片按主题分组在 `src/assets/book`、`src/assets/teach`、`src/assets/works`、`src/assets/ai`
-- 仓库里还保留了 `App.next.vue`、`App.rewrite.vue`、`ResourcesView.vue` 等历史/过渡文件，当前入口不依赖它们
+- 已移除当前入口不依赖的历史页面、旧组件和未加载样式文件
 
 ## 适合的使用场景
 
@@ -63,4 +63,3 @@ pnpm preview
 - 电子图书导览页
 - 课程资源展示页
 - 活动宣传与扫码入口页
-

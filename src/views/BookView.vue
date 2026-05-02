@@ -1,5 +1,6 @@
 <script setup>
 import bookImage from '../assets/book.JPG'
+import PageBottomPager from '../components/PageBottomPager.vue'
 import bookPage1 from '../assets/book/1.png'
 import bookPage2 from '../assets/book/2.png'
 import bookPage3 from '../assets/book/3.png'
@@ -107,6 +108,8 @@ const onlineReadingLink =
           <span class="book-gallery-index">0{{ index + 1 }}</span>
         </article>
       </div>
+
+      <PageBottomPager :total="bookGalleryImages.length" :page-count="400" :page-size="bookGalleryImages.length" />
     </section>
   </div>
 </template>

@@ -1,5 +1,6 @@
 <script setup>
 import MediaPlayCard from '../components/MediaPlayCard.vue'
+import PageBottomPager from '../components/PageBottomPager.vue'
 import aiLogoAigc from '../assets/ai/logo/AIGC.png'
 import aiLogoSeedance from '../assets/ai/logo/SEEDANCE.png'
 import aiLogoSuno from '../assets/ai/logo/SUNOAI.png'
@@ -28,7 +29,7 @@ const aiWorks = [
 </script>
 
 <template>
-  <div class="view-shell">
+  <div class="view-shell view-shell-ai">
     <section class="detail-hero">
       <div class="detail-copy">
         <p class="eyebrow">AI创作</p>
@@ -55,7 +56,7 @@ const aiWorks = [
       </div>
     </section>
 
-    <section class="section-block">
+    <section class="section-block section-block-ai">
       <div class="section-heading">
         <h2 class="section-title">AI工具平台</h2>
       </div>
@@ -70,7 +71,7 @@ const aiWorks = [
       </div>
     </section>
 
-    <section class="section-block">
+    <section class="section-block section-block-ai">
       <div class="section-heading">
         <h2 class="section-title">AI创作作品展示</h2>
       </div>
@@ -78,6 +79,8 @@ const aiWorks = [
       <div class="ai-gallery-grid">
         <MediaPlayCard v-for="item in aiWorks" :key="item.title" :image="item.image" :title="item.title" />
       </div>
+
+      <PageBottomPager :total="aiWorks.length" :page-count="5" :page-size="aiWorks.length" />
     </section>
   </div>
 </template>

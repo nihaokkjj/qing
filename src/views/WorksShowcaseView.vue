@@ -1,5 +1,6 @@
 <script setup>
 import MediaPlayCard from '../components/MediaPlayCard.vue'
+import PageBottomPager from '../components/PageBottomPager.vue'
 import { routePaths } from '../data/siteContent'
 import workSing from '../assets/works/唱支山歌给党听.png'
 import workOilfield from '../assets/works/油田一线演出.png'
@@ -80,6 +81,8 @@ const worksItems = [
       <div class="works-gallery-grid">
         <MediaPlayCard v-for="item in worksItems" :key="item.title" :image="item.image" :title="item.title" />
       </div>
+
+      <PageBottomPager :total="worksItems.length" :page-count="15" :page-size="worksItems.length" />
     </section>
   </div>
 </template>

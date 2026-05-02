@@ -29,8 +29,8 @@ defineProps({
 .media-play-card {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 16px;
+  gap: 5px;
+  padding: 4px;
   border: 1px solid rgba(164, 67, 35, 0.12);
   border-radius: 20px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(251, 245, 237, 0.94));
@@ -42,21 +42,25 @@ defineProps({
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 301px;
+  max-width: 100%;
+  height: 163px;
+  margin: 0 auto;
   overflow: hidden;
   isolation: isolate;
-  padding: 12px;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.92);
+  padding: 0;
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(255, 252, 246, 0.88), rgba(248, 239, 226, 0.92));
   cursor: pointer;
 }
 
 .media-play-card-image {
   display: block;
   width: 100%;
-  height: 210px;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.96);
+  background: transparent;
 }
 
 .media-play-card-icon {
@@ -66,8 +70,8 @@ defineProps({
   z-index: 2;
   display: grid;
   place-items: center;
-  width: 64px;
-  height: 64px;
+  width: 50px;
+  height: 50px;
   padding-left: 4px;
   border-radius: 999px;
   background: rgba(255, 246, 232, 0.94);
@@ -80,9 +84,9 @@ defineProps({
   content: '';
   width: 0;
   height: 0;
-  border-top: 12px solid transparent;
-  border-bottom: 12px solid transparent;
-  border-left: 18px solid #9f351c;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid #9f351c;
 }
 
 .media-play-card-media:hover .media-play-card-icon {
@@ -91,7 +95,7 @@ defineProps({
 
 .media-play-card-title {
   color: var(--text-strong);
-  font-size: 17px;
+  font-size: clamp(22px, 2.55vh, 26px);
   font-weight: 700;
   line-height: 1.45;
   text-align: center;
@@ -99,32 +103,35 @@ defineProps({
 
 @media (max-width: 640px) {
   .media-play-card {
-    padding: 14px;
+    padding: 4px;
     border-radius: 16px;
   }
 
   .media-play-card-media {
-    padding: 10px;
+    width: 301px;
+    height: 163px;
+    padding: 0;
     border-radius: 14px;
   }
 
   .media-play-card-image {
-    height: 190px;
+    width: 100%;
+    height: 100%;
   }
 
   .media-play-card-icon {
-    width: 56px;
-    height: 56px;
+    width: 46px;
+    height: 46px;
   }
 
   .media-play-card-icon::before {
-    border-top-width: 10px;
-    border-bottom-width: 10px;
-    border-left-width: 16px;
+    border-top-width: 9px;
+    border-bottom-width: 9px;
+    border-left-width: 14px;
   }
 
   .media-play-card-title {
-    font-size: 16px;
+    font-size: 22px;
   }
 }
 </style>

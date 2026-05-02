@@ -1,5 +1,6 @@
 <script setup>
 import MediaPlayCard from '../components/MediaPlayCard.vue'
+import PageBottomPager from '../components/PageBottomPager.vue'
 import { routePaths } from '../data/siteContent'
 import teachTraditional from '../assets/teach/走进传统文化.png'
 import teachIdeology from '../assets/teach/艺术思政课.png'
@@ -57,6 +58,8 @@ const teachingItems = [
       <div class="teach-gallery-grid">
         <MediaPlayCard v-for="item in teachingItems" :key="item.title" :image="item.image" :title="item.title" />
       </div>
+
+      <PageBottomPager :total="teachingItems.length" :page-count="14" :page-size="teachingItems.length" />
     </section>
   </div>
 </template>
