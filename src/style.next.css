@@ -227,6 +227,7 @@ ul {
 
 .detail-hero {
   display: grid;
+  margin-bottom: 19px;
   grid-template-columns: 1.06fr 0.94fr;
   gap: 28px;
   align-items: center;
@@ -1935,7 +1936,7 @@ body::before {
 
 .ai-logo-grid {
   display: grid;
-  gap: 14px;
+  gap: 8px 14px;
 }
 
 .ai-gallery-grid,
@@ -1946,6 +1947,11 @@ body::before {
   gap: 6px 10px;
 }
 
+.teach-gallery-grid .media-play-card .media-play-card-media {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 .ai-logo-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -1953,8 +1959,8 @@ body::before {
 .ai-logo-card {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 16px;
+  gap: 6px;
+  padding: 8px 16px 9px;
   border: 1px solid rgba(164, 67, 35, 0.12);
   border-radius: 20px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(251, 245, 237, 0.94));
@@ -1965,20 +1971,22 @@ body::before {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px;
+  height: 92px;
+  min-height: 0;
+  padding: 6px 12px;
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.92);
 }
 
 .ai-logo-media {
-  min-height: 136px;
+  min-height: 0;
 }
 
 .ai-logo-image {
   display: block;
   width: 100%;
   max-width: 200px;
-  max-height: 88px;
+  max-height: 70px;
   object-fit: contain;
 }
 
@@ -2010,7 +2018,7 @@ body::before {
   .ai-logo-grid,
   .ai-gallery-grid {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 8px;
   }
 
   .works-gallery-grid,
@@ -2020,17 +2028,22 @@ body::before {
   }
 
   .ai-logo-card {
-    padding: 14px;
+    padding: 8px 14px 9px;
     border-radius: 16px;
   }
 
   .ai-logo-media {
-    padding: 10px;
+    height: 84px;
+    padding: 6px 10px;
     border-radius: 14px;
   }
 
   .ai-logo-media {
-    min-height: 120px;
+    min-height: 0;
+  }
+
+  .ai-logo-image {
+    max-height: 64px;
   }
 
   .ai-card-name {
